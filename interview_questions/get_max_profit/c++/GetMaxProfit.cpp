@@ -40,29 +40,29 @@ int main() {
     
     
     int i = 10;
-    std::cout << "Pre increment" << std::endl;
-    std::cout << ++i<< std::endl; //Pat: 11
-    std::cout << i << std::endl; // Pat: 11
-    i = 10;
-    std::cout << "Post increment" << std::endl;
-    std::cout << i++ << std::endl; //10
-    std::cout << i << std::endl; //11
-    i = 10;
-    std::cout << "Pre decrement" << std::endl;
-    std::cout << --i << std::endl; //9
-    std::cout << i << std::endl; //9
-    i = 10;
-    std::cout << "Post decrement" << std::endl;
-    std::cout << i-- << std::endl; //10
-    std::cout << i << std::endl; //9
-    
-    i = 10;
-    std::cout << ++i + i++ << std::endl; // 11 + 12
-    std::cout << i << std::endl; // 12
+    // std::cout << "Pre increment" << std::endl;
+    // std::cout << ++i<< std::endl; //Pat: 11
+    // std::cout << i << std::endl; // Pat: 11
+    // i = 10;
+    // std::cout << "Post increment" << std::endl;
+    // std::cout << i++ << std::endl; //10
+    // std::cout << i << std::endl; //11
+    // i = 10;
+    // std::cout << "Pre decrement" << std::endl;
+    // std::cout << --i << std::endl; //9
+    // std::cout << i << std::endl; //9
+    // i = 10;
+    // std::cout << "Post decrement" << std::endl;
+    // std::cout << i-- << std::endl; //10
+    // std::cout << i << std::endl; //9
     
     // i = 10;
-    // std::cout << --i + ++i << std::endl;
-    // std::cout << i << std::endl;
+    // std::cout << ++i + i++ << std::endl; // 11 + 12
+    // std::cout << i << std::endl; // 23
+    
+    i = 10;
+    std::cout << --i + i++ << std::endl;
+    std::cout << i << std::endl;
     
     // i = 10;
     // std::cout << i-- + --i << std::endl;
