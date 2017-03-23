@@ -9,16 +9,12 @@
 import random
 import numpy as np
 X = 5
-Y = 5
+Y = 4
 # declare grid variable which represents our matrix, initialize it with 0's
-grid = [[0 for y in range(Y)] for x in range(X)]
+grid = [[random.randint(0, 5) for y in range(Y)] for x in range(X)]
 # create a routes matrix of the same size as grid that will store the amount
 # of routes possible at each index
-routes = [[random.randint(0, 5) for y in range(Y)] for x in range(X)]
-for i in range(X):
-    for j in range(Y):
-        # initialise grid matrix with random values (which don't matter in this problem)
-        grid[i][j] = random.randint(0, 5)
+routes = [[0 for y in range(Y)] for x in range(X)]
 print("Starting Grid:")
 print(np.matrix(grid))
 print("\nRoutes Matrix:")
@@ -36,4 +32,4 @@ for i in range(X):
 print("\nOnce all the routes have been calculated, our routes matrix looks like this.")
 print(np.matrix(routes))
 print("\nThe total number of routes will be contained in the [w-1][h-1] index.")
-print("The total number of routes possible is", routes[X - 1][Y - 1], ".")
+print("The total number of routes possible is", routes[X - 1][Y - 1])
