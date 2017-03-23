@@ -9,11 +9,13 @@
 import random
 import numpy as np
 
-X = 10 # width of matrix
-Y = 10 # height of matrix
+X = 5 # width of matrix
+Y = 5 # height of matrix
+RANDOM_MIN = 1  # minimum random number you would like to populate the matrix
+RANDOM_MAX = 5 # maximum random number you would like to populate the matrix
 
 # declare grid variable which represents our matrix, initialize it with random numbers
-grid = [[random.randint(1, 100) for y in range(Y)] for x in range(X)]
+grid = [[random.randint(RANDOM_MIN, RANDOM_MAX) for y in range(Y)] for x in range(X)]
 # create a costs matrix of the same size as grid that will store the minimum
 # cost to get to each index in the matrix
 costs = [[0 for y in range(Y)] for x in range(X)]

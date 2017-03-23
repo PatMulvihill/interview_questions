@@ -10,10 +10,12 @@ import random
 import numpy as np
 
 X = 5
-Y = 4
+Y = 5
+RANDOM_MIN = 1  # minimum random number you would like to populate the matrix
+RANDOM_MAX = 5 # maximum random number you would like to populate the matrix
 
 # declare grid variable which represents our matrix, initialize it with random numbers
-grid = [[random.randint(0, 5) for y in range(Y)] for x in range(X)]
+grid = [[random.randint(RANDOM_MIN, RANDOM_MAX) for y in range(Y)] for x in range(X)]
 # create a routes matrix of the same size as grid that will store the amount
 # of routes possible at each index
 routes = [[0 for y in range(Y)] for x in range(X)]
@@ -32,7 +34,7 @@ for i in range(X):
             routes[i][j] = 1
         else:
             routes[i][j] = routes[i - 1][j] + routes[i][j - 1]
-            
+
 print("\nOnce all the routes have been calculated, our routes matrix looks like this.")
 print(np.matrix(routes))
 print("\nThe total number of routes will be contained in the [X - 1][Y - 1] index.")
