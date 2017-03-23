@@ -8,8 +8,10 @@
 
 import random
 import numpy as np
+
 X = 5
 Y = 4
+
 # declare grid variable which represents our matrix, initialize it with random numbers
 grid = [[random.randint(0, 5) for y in range(Y)] for x in range(X)]
 # create a routes matrix of the same size as grid that will store the amount
@@ -19,6 +21,7 @@ print("Starting Grid:")
 print(np.matrix(grid))
 print("\nRoutes Matrix:")
 print(np.matrix(routes))
+
 # Initialize the top and left edge route values to 1
 # There will always only be 1 way to get to any of these values because of the
 # no back-tracking condition and the condition that steps much only be downward
@@ -29,6 +32,7 @@ for i in range(X):
             routes[i][j] = 1
         else:
             routes[i][j] = routes[i - 1][j] + routes[i][j - 1]
+            
 print("\nOnce all the routes have been calculated, our routes matrix looks like this.")
 print(np.matrix(routes))
 print("\nThe total number of routes will be contained in the [X - 1][Y - 1] index.")
